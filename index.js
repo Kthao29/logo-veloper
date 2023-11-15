@@ -5,7 +5,7 @@ const setShape = require('./lib/setShape.js');
 const fileName = './examples/logo.svg';
 
 
-console.log('Answer all the questions to create a logo!');
+console.log('Answer questions to create your own logo');
 
 //prompt to create logo
 const questions = [
@@ -33,11 +33,11 @@ const questions = [
     }, 
   ];
 
-//function to create logo
+//function to create logo into examples folder with the name of logo.svg
 function createLogo(input) {
     const svg = setShape(input);
     fs.writeFile(fileName, svg, "UTF-8", () => {
-        console.log('Generated logo.svg');
+        console.log('Generated logo.svg in examples folder');
     })
 }
 
